@@ -1,6 +1,7 @@
 const {messages}= require("../function/messages");
-const { organisationModel } = require("../model/model");
+const { organisationModel } = require("../model/organisationSchema");
 const jwt = require("jsonwebtoken")
+
 const setupOrganisation =async (req,res)=>{
     const {name,tagline,mobile,email,password}=req.body;
     try {
@@ -34,7 +35,7 @@ const setupOrganisation =async (req,res)=>{
 const login =async (req,res)=>{
     const {email,password}=req.body;
     try {
-        const result = await organisationModel.collection.findOne({
+        const result = await organisationModel.findOne({
             email:email,
             password:password
         })

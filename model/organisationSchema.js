@@ -43,6 +43,5 @@ const organisationSchemma = new mongoose.Schema({
 }, {
     timestamps: true
 })
-module.exports = {
-    organisationSchemma
-}
+const organisationModel = mongoose.model("organisation", organisationSchemma)
+module.exports = organisationModel

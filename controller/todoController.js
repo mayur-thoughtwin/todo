@@ -1,6 +1,6 @@
 const { ObjectId } = require('mongodb');
 const { messages } = require("../function/messages");
-const { todoModel } = require("../model/model");
+const { todoModel } = require("../model/todoSchema");
 
 const add_task = async (req, res) => {
     const { title, description } = req.body;

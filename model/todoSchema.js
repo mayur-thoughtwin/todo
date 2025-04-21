@@ -5,6 +5,5 @@ const todoSchema=mongoose.Schema({
     "description":String,
 })
 
-module.exports={
-    todoSchema
-}
+
+module.exports = mongoose.model("todo", todoSchema);
