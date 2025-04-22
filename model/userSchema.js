@@ -32,6 +32,16 @@ const userSchema = new mongoose.Schema({
         type: String,
         maxlength: [30 , "Organisation name can't exceed 100 characters"]
     },
+    image: {
+        type: String,
+    },
+    otp: {
+        type: Number
+    },
+    otp_verified: {
+        type: Number,
+        default: 0
+    },
     active_flag: {
         type: Number,
         default: 1
@@ -45,3 +55,6 @@ const userSchema = new mongoose.Schema({
 });
 
 const userModel = mongoose.model("user", userSchema);
+module.exports = {
+    userModel
+}

@@ -34,7 +34,40 @@ const edit_task = async (req,res) => {
     }
 }
 
+
+// const assign_task = async (req,res) => {
+//     const {id}=req.user;
+//     const {}
+// }
+// const assign_task = async (req, res) => {
+//     const { id } = req.user;
+//     const { members, title, description } = req.body;
+
+//     try {
+//         // Check if a task with the same title already exists
+//         const existingTask = await todoModel.findOne({ title });
+
+//         if (!existingTask) {
+//             return res.status(400).json({ success: false, msg: messages.msgtaskNotFound });
+//         }
+
+//         // Create a new task
+//         const task = await todoModel.create({
+//             creator_id: id,
+//             members,
+//             title,
+//             description,
+//         });
+
+//         return res.status(201).json({ success: true, task });
+//     } catch (error) {
+//         console.error(error);
+//         return res.status(500).json({ success: false, msg: messages.msgInternalServerError });
+//     }
+// };
+
 module.exports = {
     add_task,
-    edit_task
+    edit_task,
+    
 }
